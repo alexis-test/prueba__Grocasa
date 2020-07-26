@@ -1,0 +1,140 @@
+.section__detalle {
+    padding-top: $gutter*1.5;
+    @extend .div__70;
+
+    .icons {
+        width: 33%;
+
+        @include bp(no-mobile) {
+            width: 19%;
+        }
+
+        color: $grey;
+        font-weight: bold;
+        margin: $gutter 0;
+
+        @include bp(no-mobile) {
+            margin: $gutter 0 $gutter*2 0;
+        }
+
+        >div {
+            @extend .index__icons;
+        }
+    }
+
+    .car__info {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+
+        >div {
+            &:last-child {
+                display: flex;
+                align-items: center;
+
+                @include bp(no-mobile) {
+                    justify-content: space-between;
+                    width: 30%;
+                }
+
+                justify-content: space-evenly;
+                width: 60%;
+
+                p {
+                    color: $orange;
+
+                    @include bp(no-mobile) {
+                        font-size: rem(29);
+                    }
+
+                    font-size: rem(20);
+                    font-weight: 700;
+
+                    span {
+                        font-weight: 500;
+
+                        @include bp(mobile) {
+                            font-size: rem(15);
+                        }
+                    }
+                }
+
+                img {
+                    width: 20%;
+                }
+            }
+        }
+    }
+
+    .car {
+        text-align: left;
+
+        @include bp(no-mobile) {
+            display: flex;
+        }
+
+        >div {
+            width: 100%;
+
+            @include bp(tabletVmin) {
+                display: flex;
+                flex-direction: column;
+            }
+
+            &:last-child {
+                margin-top: $gutter;
+
+                @include bp(no-mobile) {
+                    margin-top: inherit;
+                }
+            }
+
+            @include bp(no-mobile) {
+                width: 40%;
+            }
+        }
+    }
+
+    .iframe__cont {
+        margin-top: $gutter;
+        position: relative;
+        width: 100%;
+        display: block;
+        height: rem(440);
+        background-color: lighten($color: $orange, $amount: 7);
+
+        iframe {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: rem(440);
+            opacity: .85;
+        }
+    }
+
+    .section__detalle__footer {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        margin-bottom: $gutter*2;
+        @include bp(no-mobile){
+        justify-content: flex-end;
+        margin-bottom: inherit;
+        }
+        justify-content: space-between;
+
+        @extend .button__toggle;
+
+        >div {
+            &:last-child {
+                @include bp(no-mobile){
+                    margin: $gutter 0 0 $gutter*1.5;
+                }
+                margin: rem(14) 0 0 $gutter/2;
+            }
+        }
+    }
+}

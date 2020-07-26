@@ -1,0 +1,128 @@
+.section__index {
+
+    h3 {
+        font-weight: $fontWeightBold;
+        font-size: rem(17.5);
+
+        @include bp(no-mobile) {
+            font-size: rem(22);
+            margin-top: $gutter;
+        }
+
+        @include bp(mobile-xs) {
+            font-size: rem(14);
+        }
+
+        color: $orange;
+        text-align: left;
+        margin-top: $gutter/2;
+    }
+
+    h6 {
+        font-weight: $fontWeightLight;
+        font-size: rem(16);
+        color: $grey;
+
+        @include bp(no-mobile) {
+            font-size: rem(20);
+        }
+
+        @include bp(mobile-xs) {
+            font-size: rem(13);
+        }
+
+        text-align: left;
+        padding-top: $gutter/5;
+    }
+
+    clear: both;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    @include bp(no-mobile) {
+        flex-direction: row;
+    }
+
+    justify-content: space-between;
+
+    >div {
+
+        @extend .div__50-50;
+
+        img {
+            width: calc(99% - 60px);
+            width: 100%;
+
+            @include bp(no-mobile) {
+                width: 100%;
+            }
+
+            +div {
+                +div {
+                    clear: both;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    >div {
+                        width: 33%;
+
+                        @include bp(no-mobile) {
+                            width: 31%;
+                        }
+
+                        color: $grey;
+                        font-weight: bold;
+                        margin: $gutter 0;
+
+                        @include bp(no-mobile) {
+                            margin: $gutter 0 $gutter*2 0;
+                        }
+
+                        &:first-child {
+                            @extend .index__icons
+                        }
+
+                        &:nth-child(2) {
+                            text-align: left;
+                            font-size: rem(19);
+                            margin-left: rem(-16);
+                            margin-top: rem(9);
+
+                            @include bp(no-mobile) {
+                                text-align: center;
+                                font-size: rem(28);
+                                margin-top: rem(9);
+                            }
+
+                            @include bp(tabletV) {
+                                font-size: rem(27);
+                            }
+
+                            @include bp(mobile-xs) {
+                                font-size: rem(16);
+                            }
+
+                            span {
+                                font-weight: $fontWeightLight;
+                                white-space: nowrap;
+
+                                @include bp(mobile) {
+                                    font-size: rem(11);
+                                    padding-left: rem(-5);
+                                }
+                            }
+                        }
+
+                        &:last-child {
+                            @extend .button__1
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

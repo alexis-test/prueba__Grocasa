@@ -1,0 +1,78 @@
+.slider {
+    position: relative;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    z-index: 2;
+
+    .slider__content {
+        height: 60vh;
+        background-position: center;
+        background-size: cover;
+        scroll-snap-align: start;
+        width: 100%;
+        @media (min-width:($breakpoint--tV*1px)) {
+            width: 90%;
+            margin-right: rem(10);
+            }
+            width: 100%;
+    }
+    
+    >div {
+
+
+        &:nth-child(1) {
+            background-image: url(../assets/Rectangle-1@2x.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        &:nth-child(2) {
+            background-image: url(../assets/Rectangle-1@2x.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        &:nth-child(3) {
+            background-image: url(../assets/Rectangle-1@2x.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+}
+
+.slider__controls {
+    position: absolute;
+    width: 100%;
+    height: rem(30);
+    z-index: 9;
+    bottom: rem(30);
+
+    a {
+        width: rem(30);
+        display: inline-block;
+        height: rem(30);
+        color: transparent;
+        background-image: url(../assets/sliderBullet.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        &:not(:first-child) {
+            margin-left: rem(20);
+        }
+    }
+}
+
+.ocultaScroll {
+    width: 100%;
+    background-color: $white;
+    height: rem(20);
+    margin-top: rem(-17);
+    z-index: 3;
+    position: relative;
+}

@@ -1,0 +1,123 @@
+.button {
+    
+        text-decoration: none;
+        color:$orange;
+        border-radius:rem(50);
+        border:solid 1px $orange;
+        padding: $gutter/3 $gutter;
+        font-size: rem(10);
+        font-weight: $fontWeightBold;
+        transition: 1s;
+        @include bp(no-mobile){
+            border:solid 2px $orange;
+            padding: $gutter/2 $gutter*1.8;
+            font-size: rem(17);
+        }
+        &:hover{
+            color:$white;
+            background-color: $orange;
+            border-color: $grey;
+            cursor: pointer;
+        }
+
+}
+
+.button__1 {
+
+    .cls-1,
+    .cls-2,
+    .cls-4 {
+        transition: 1s;
+
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        .cls-1 {
+            fill: $orange;
+        }
+
+        .cls-2 {
+            stroke: $grey;
+        }
+
+        .cls-4 {
+            fill: $white;
+        }
+    }
+}
+
+.button__toggle {
+    input[type=checkbox] {
+        height: 0;
+        width: 0;
+        visibility: hidden;
+    }
+
+    label {
+        cursor: pointer;
+        width: rem(51);
+        height: rem(29);
+        @include bp(no-mobile){
+            width: rem(71);
+            height: rem(44);
+        }
+        background: $orange;
+        display: block;
+        border-radius: 100px;
+        position: relative;
+
+        span {
+            display: inline-block;
+            color:$orange;
+            font-size: rem(15);
+            margin-top: rem(38);
+            white-space: nowrap;
+            @include bp(no-mobile){
+            font-size: rem(22);
+            margin-top: rem(9);
+            margin-left: rem(-300);
+            }
+
+        }
+    }
+
+    label:after {
+        content: '';
+        position: absolute;
+        top: rem(3);
+        left: rem(23);
+        width: rem(23);
+        height: rem(23);
+        @include bp(no-mobile){
+        top: rem(5);
+        left: rem(32);
+        width: rem(34);
+        height: rem(34);
+        }
+        background: $white;
+        border-radius: rem(88);
+        transition: .3s;
+    }
+
+    input:checked+label {
+        background: darken(adjust-hue($orange, 70deg), 5);
+        span {
+            color:darken(adjust-hue($orange, 70deg), 9);
+        }
+    }
+
+    input:checked+label:after {
+        left: calc(100% - 27px);
+        @include bp(no-mobile){
+        left: calc(100% - 35px);
+        }
+        transform: translateX(-100%);
+    }
+
+    label:active:after {
+        width: rem(38);
+    }
+
+}

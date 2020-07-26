@@ -1,0 +1,190 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h3,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+// style 
+
+body {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main {
+    @media (min-width:($breakpoint--tH*1px + 1)) {
+        width: 100%;
+    }
+
+    .mw_1200 {
+        max-width: $maxWidth;
+        margin: 0 auto;
+        padding: 0 $gutter*1.8;
+
+        @media (min-width:($breakpoint--s*1px)) and (max-width:($breakpoint--tH*1px)) {
+            padding: rem(10);
+        }
+    
+        width: calc(100% - 72px);        
+    }
+
+    .mw_100pc {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: $gutter*1.5;
+        position: relative;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    p,
+    ul {
+        color: $grey;
+    }
+
+    p {
+        text-align: left;
+        font-weight: regular;
+        font-size: rem(14.5);
+    }
+
+    strong {
+        color:$grey--dark;
+        font-weight: 700;
+    }
+
+}
+
+// svg style
+
+.cls-1 {
+    fill: #fff;
+  }
+  .cls-2 {
+    fill: none;
+    stroke: #ff5000;
+  }
+  .cls-3,
+  .cls-4 {
+    isolation: isolate;
+  }
+  .cls-4 {
+    font-size: 11px;
+    fill: #ff5000;
+    font-family: Montserrat-Bold, Montserrat;
+    font-weight: 700;
+  }
+  .cls-5 {
+    letter-spacing: -0.01em;
+  }
+  .cls-6 {
+    letter-spacing: 0em;
+  }

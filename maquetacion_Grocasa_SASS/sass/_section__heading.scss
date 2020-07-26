@@ -1,0 +1,19 @@
+
+.section__heading {
+ text-align: left;
+ h1 {
+     font-size: rem(24);
+     font-weight: 700;
+     padding-top: rem(5);
+ }
+ h2 {
+    font-size: rem(22);
+    font-weight: 700;
+    padding-top: rem(5);
+}
+ h6 {
+    font-size: rem(20);
+    font-weight: $fontWeightLight; 
+    padding-top: rem(5);
+ }
+}

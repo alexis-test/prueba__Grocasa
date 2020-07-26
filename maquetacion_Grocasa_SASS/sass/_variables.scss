@@ -1,0 +1,32 @@
+//
+// colors
+// ============================================
+
+$grey:#797979;
+$grey--dark: #5c5c5c;
+$orange:#ff5000;
+$white:#fff;
+
+.grey {color:$grey};
+.grey--dark {color:$grey--dark};
+.orange {color:$orange};
+.white {color:$white};
+
+//
+// breakpoints -> desde IPhoneV a desktop
+// ============================================
+
+$breakpoint--tH: 1024;
+$breakpoint--tV: 900;
+$breakpoint--s: 600;
+$bp--s: ($breakpoint--s - 1);
+$bp--xs: 360;
+
+//
+// widths, weight
+// ============================================
+
+$maxWidth: rem(1000); // 1200px
+$fontWeightLight:400;
+$fontWeightBold:700;
+$gutter: 20px;
